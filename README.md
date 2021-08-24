@@ -17,6 +17,7 @@ Aqui, neste repositório, estão os scripts DDL das estruturas das tabelas para 
 Para implementar um controle de login, navegue até a seção **Application \ Shared Components \ Authentication Schemes**. Pode-se editar o esquema já existente (*Application Express Authentication*) ou criar um novo esquema e torná-lo ativo (*current*). Em qualquer uma das opções, basta definir:
 
 **Scheme Type** = Custom
+
 **Authentication Function Name** = pkg_auth_schemes.autenticar_usuario
 
 Obs: O pacote *pkg_auth_schemes* está fornecido aqui neste repositório.
@@ -28,14 +29,19 @@ Para usar este esquema, em cada página que terá o controle, caso não seja pú
 Para implementar o controle de acesso às páginas, navegue até a seção **Application \ Shared Components \ Authorization Schemes**. Crie um esquema (*From Scratch*) e defina:
 
 **Name** = Permitir Acesso
+
 **Scheme Type** = PL/SQL Function Returning Boolean
+
 **PL/SQL Function Body** = 
 
+```sql
 BEGIN
   RETURN pkg_auth_schemes.permitir_acesso(:APP_USER,:APP_PAGE_ID);
 END;
+```
 
 **Identify error message displayed when scheme violated** = Desculpe, você não tem permissão para acessar esta página.
+
 **Validate authorization scheme** = Always (No Caching)
 
 Obs: O pacote *pkg_auth_schemes* está fornecido aqui neste repositório.
@@ -47,14 +53,19 @@ Para usar este esquema, em cada página que terá o controle, vá até a seção
 Para implementar um menu de navegação dinâmico, navegue até a seção **Application \ Shared Components \ Navigation Menu**. Crie uma nova lista (*From Scratch*) e defina:
 
 **Name** = Menu Dinamico
+
 **Type** = Dynamic
+
 **Query Source Type** = SQL Query
+
 **Query** = (copie e cole o conteúdo do aquivo DQL/Query_Menu.sql)
 
 Depois, navegue até a seção **Application \ Shared Components \ User Interface Attributes \ Navigation Menu** e defina:
 
 **Navigation Menu List** = Menu Dinamico
+
 **Template Options - Use Template Defaults** = não (*opcional*)
+
 **Collapsed by Default (Default)** = não (*opcional*)
 
 ### Considerações
