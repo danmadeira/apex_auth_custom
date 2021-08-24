@@ -58,7 +58,7 @@ Para implementar um menu de navegação dinâmico, navegue até a seção **Appl
 
 **Query Source Type** = SQL Query
 
-**Query** = (copie e cole o conteúdo do aquivo DQL/Query_Menu.sql)
+**Query** = (copie e cole o conteúdo do aquivo [Query_Menu.sql](DQL/Query_Menu.sql?raw=true))
 
 Depois, navegue até a seção **Application \ Shared Components \ User Interface Attributes \ Navigation Menu** e defina:
 
