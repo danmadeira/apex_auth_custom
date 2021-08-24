@@ -24,6 +24,8 @@ Obs: O pacote *pkg_auth_schemes* está fornecido aqui neste repositório.
 
 Para usar este esquema, em cada página que terá o controle, caso não seja pública, vá até a seção **Page \ Security** e defina **Authentication** = Page Requires Authentication.
 
+![Authentication Schemes](img/APEX_Authentication_Scheme.png?raw=true)
+
 ### Authorization Scheme
 
 Para implementar o controle de acesso às páginas, navegue até a seção **Application \ Shared Components \ Authorization Schemes**. Crie um esquema (*From Scratch*) e defina:
@@ -48,6 +50,8 @@ Obs: O pacote *pkg_auth_schemes* está fornecido aqui neste repositório.
 
 Para usar este esquema, em cada página que terá o controle, vá até a seção **Page \ Security** e defina **Authorization Scheme** = Permitir Acesso.
 
+![Authorization Schemes](img/APEX_Authorization_Scheme.png?raw=true)
+
 ### Navigation Menu
 
 Para implementar um menu de navegação dinâmico, navegue até a seção **Application \ Shared Components \ Navigation Menu**. Crie uma nova lista (*From Scratch*) e defina:
@@ -67,6 +71,10 @@ Depois, navegue até a seção **Application \ Shared Components \ User Interfac
 **Template Options - Use Template Defaults** = não (*opcional*)
 
 **Collapsed by Default (Default)** = não (*opcional*)
+
+![Navigation Menu List](img/APEX_List_Menu.png?raw=true)
+
+![User Interface Attributes](img/APEX_User_Interface.png?raw=true)
 
 ### Considerações
 
